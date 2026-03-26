@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+  background: #0f1117;
+  color: #e2e8f0;
+}
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Custom slider styling */
+input[type='range'] {
+  @apply w-full h-2 rounded-full appearance-none cursor-pointer;
+  background: linear-gradient(to right, #6366f1, #8b5cf6);
+}
+
+input[type='range']::-webkit-slider-thumb {
+  @apply appearance-none w-4 h-4 rounded-full cursor-pointer;
+  background: #a78bfa;
+  box-shadow: 0 0 4px rgba(167, 139, 250, 0.5);
+}
+
+input[type='range']::-moz-range-thumb {
+  @apply w-4 h-4 rounded-full cursor-pointer border-0;
+  background: #a78bfa;
+  box-shadow: 0 0 4px rgba(167, 139, 250, 0.5);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #1e2130;
+}
+::-webkit-scrollbar-thumb {
+  background: #4b5563;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
